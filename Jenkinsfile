@@ -1,17 +1,17 @@
 pipeline {
 agent any 
 stages {
-    stage('CONTAINERS') {
+    stage('containers') {
         steps {
            sh 'docker container ls'
       }
     }
-    stage('BUILD') {
+    stage('build') {
         steps {
            sh 'docker build -t ecomm .'
       }
     }
-    stage('DEPLOY') {
+    stage('deploy') {
         steps {
            sh 'docker container run -dt --name ecomm-con -p 60:80 ecomm'
       }
