@@ -6,14 +6,14 @@ stages {
            sh 'pwd'
       }
     }
-    stage('build') {
+    stage('BUILD') {
         steps {
            sh 'docker build -t login .'
       }
     }
-    stage('deploy') {
+    stage('DEPLOY') {
         steps {
-           sh 'docker container run -dt --name login-con -p 70:80 login'
+           sh 'docker container run -dt --name login-con -p 7000:80 login'
       }
     }
   }
