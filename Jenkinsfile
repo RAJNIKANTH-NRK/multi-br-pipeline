@@ -6,14 +6,14 @@ stages {
            sh 'pwd'
       }
     }
-    stage('build') {
+    stage('BUILD') {
         steps {
            sh 'docker build -t food .'
       }
     }
-    stage('deploy') {
+    stage('DEPLOY') {
         steps {
-           sh 'docker container run -dt --name food-con -p 90:80 food'
+           sh 'docker container run -dt --name food-con -p 9000:80 food'
       }
     }
   }
