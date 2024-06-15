@@ -13,7 +13,7 @@ stages {
     }
     stage('DEPLOY') {
         steps {
-           sh 'docker container run -dt --name ecomm-con -p 8000:80 ecomm'
+           sh 'docker container run -dt --name ecomm -p 8000:80 ecomm'
       }
     }
   }
