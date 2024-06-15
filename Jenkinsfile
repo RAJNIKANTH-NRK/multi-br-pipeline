@@ -8,12 +8,12 @@ stages {
     }
     stage('BUILD') {
         steps {
-           sh 'docker build -t ecomm .'
+           sh 'docker build -t cloths .'
       }
     }
     stage('DEPLOY') {
         steps {
-           sh 'docker container run -dt --name ecomm-con -p 8000:80 ecomm'
+           sh 'docker container run -dt --name cloths-con -p 8000:80 cloths'
       }
     }
   }
