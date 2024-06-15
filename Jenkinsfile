@@ -13,7 +13,7 @@ stages {
     }
     stage('DEPLOY') {
         steps {
-           sh 'docker container run -dt --name login-con -p 7000:80 login'
+           sh 'docker container run -dt --name login -p 7000:80 login'
       }
     }
   }
